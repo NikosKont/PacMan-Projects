@@ -1,0 +1,14 @@
+python pacman.py
+python pacman.py -l testMaze -p GoWestAgent
+python pacman.py -layout tinyMaze -p GoWestAgent
+python pacman.py -h
+python pacman.py -l tinyMaze -p SearchAgent -a fn=tinyMazeSearch
+python pacman.py -l tinyMaze -p SearchAgent
+python pacman.py -l mediumMaze -p SearchAgent
+python pacman.py -l bigMaze -z .5 -p SearchAgent
+python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
+python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z .5
+python eightpuzzle.py
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic 
+python pacman.py -l testSearch -p AStarFoodSearchAgent
+python pacman.py -l trickySearch -p AStarFoodSearchAgent
