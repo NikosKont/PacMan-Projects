@@ -35,7 +35,7 @@ class SearchProblem:
 
     def isGoalState(self, state):
         """
-          state: Search state
+        state: Search state
 
         Returns True if and only if the state is a valid goal state.
         """
@@ -43,7 +43,7 @@ class SearchProblem:
 
     def getSuccessors(self, state):
         """
-          state: Search state
+        state: Search state
 
         For a given state, this should return a list of triples, (successor,
         action, stepCost), where 'successor' is a successor to the current
@@ -54,7 +54,7 @@ class SearchProblem:
 
     def getCostOfActions(self, actions):
         """
-         actions: A list of actions to take
+        actions: A list of actions to take
 
         This method returns the total cost of a particular sequence of actions.
         The sequence must be composed of legal moves.
@@ -121,10 +121,8 @@ def bestFirstSearch(problem: SearchProblem, f=nullHeuristic):
             elif child.pathCost < explored[child.state].pathCost:
                 frontier.update(child, f(child, problem))
                 explored.pop(child.state)
-                # explored[child.state] = child
 
     return None
-    # return node.path
 
 def nodeDepth(node: Node, problem):
     return node.depth

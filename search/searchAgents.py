@@ -66,8 +66,8 @@ class SearchAgent(Agent):
     location (1,1)
 
     Options for fn include:
-      depthFirstSearch or dfs
-      breadthFirstSearch or bfs
+    depthFirstSearch or dfs
+    breadthFirstSearch or bfs
 
 
     Note: You should NOT change any code in SearchAgent
@@ -184,12 +184,12 @@ class PositionSearchProblem(search.SearchProblem):
         """
         Returns successor states, the actions they require, and a cost of 1.
 
-         As noted in search.py:
-             For a given state, this should return a list of triples,
-         (successor, action, stepCost), where 'successor' is a
-         successor to the current state, 'action' is the action
-         required to get there, and 'stepCost' is the incremental
-         cost of expanding to that successor
+        As noted in search.py:
+        For a given state, this should return a list of triples,
+        (successor, action, stepCost), where 'successor' is a
+        successor to the current state, 'action' is the action
+        required to get there, and 'stepCost' is the incremental
+        cost of expanding to that successor
         """
 
         successors = []
@@ -343,10 +343,10 @@ def cornersHeuristic(state, problem):
     """
     A heuristic for the CornersProblem that you defined.
 
-      state:   The current search state
-               (a data structure you chose in your search problem)
+    state:   The current search state
+    (a data structure you chose in your search problem)
 
-      problem: The CornersProblem instance for this layout.
+    problem: The CornersProblem instance for this layout.
 
     This function should always return a number that is a lower bound on the
     shortest path from the state to a goal of the problem; i.e.  it should be
@@ -369,8 +369,8 @@ class FoodSearchProblem:
     food (dots) in a Pacman game.
 
     A search state in this problem is a tuple ( pacmanPosition, foodGrid ) where
-      pacmanPosition: a tuple (x,y) of integers specifying Pacman's position
-      foodGrid:       a Grid (see game.py) of either True or False, specifying remaining food
+    pacmanPosition: a tuple (x,y) of integers specifying Pacman's position
+    foodGrid:       a Grid (see game.py) of either True or False, specifying remaining food
     """
     def __init__(self, startingGameState):
         self.start = (startingGameState.getPacmanPosition(), startingGameState.getFood())
@@ -451,11 +451,6 @@ def foodHeuristic(state, problem):
     if not foodList:
         return 0
 
-    # foodList.sort(key=distance)
-    # foodList.reverse()
-    # return distance(foodList[0])
-
-    # return max([mazeDistance(food, position, problem.startingGameState) for food in foodList])
     return max([distance(food) for food in foodList])
 
 class ClosestDotSearchAgent(SearchAgent):

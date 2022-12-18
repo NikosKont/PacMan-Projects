@@ -91,6 +91,7 @@ class ReflexAgent(Agent):
 
         return scoreDiff + minMaxDist -5*minCapsDist - (minFoodDist if not foodChanged else 0)
 
+
 def scoreEvaluationFunction(currentGameState):
     """
       This default evaluation function just returns the score of the state.
@@ -170,7 +171,6 @@ class MinimaxAgent(MultiAgentSearchAgent):
 
           return v
 
-
         return max_value(gameState)
 
 
@@ -224,7 +224,6 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
 
           return v
 
-
         return max_value(gameState)
 
 class ExpectimaxAgent(MultiAgentSearchAgent):
@@ -271,7 +270,6 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
             v += float(v2)
 
           return v / float(len(state.getLegalActions(agent)))
-
 
         return max_value(gameState)
 
